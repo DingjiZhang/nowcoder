@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class ReverseList {
 
-    public ListNode ReverseList(ListNode head) {
+    public ListNode Reverse(ListNode head) {
         if (head == null) {
             return null;
         }
