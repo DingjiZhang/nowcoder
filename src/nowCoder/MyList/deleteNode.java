@@ -1,4 +1,4 @@
-package MyList;
+package nowCoder.MyList;
 
 public class deleteNode {
     public ListNode deleteNode(ListNode head, int val) {

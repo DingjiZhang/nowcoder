@@ -1,4 +1,4 @@
-package MyList;
+package nowCoder.MyList;
 
 // 删除重复的元素，使其只出现一次
 public class DeleteDuplication2 {

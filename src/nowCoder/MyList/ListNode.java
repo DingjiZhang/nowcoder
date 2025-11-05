@@ -1,4 +1,4 @@
-package MyList;
+package nowCoder.MyList;
 
 public class ListNode {
     int val;
