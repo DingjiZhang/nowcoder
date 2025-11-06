@@ -1,4 +1,4 @@
-package nowCoder.MyList;
+package nowCoder.myList;
 
 import java.util.Stack;
 

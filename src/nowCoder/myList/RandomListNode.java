@@ -1,4 +1,4 @@
-package nowCoder.MyList;
+package nowCoder.myList;
 
 public class RandomListNode {
     int label;

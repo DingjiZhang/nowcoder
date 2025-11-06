@@ -1,4 +1,4 @@
-package nowCoder.MyTree;
+package nowCoder.myTree;
 
 public class TreeDepth {
     public int TreeDepth(TreeNode node) {

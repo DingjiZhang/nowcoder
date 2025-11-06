@@ -1,4 +1,4 @@
-package nowCoder.MyTree;
+package nowCoder.myTree;
 
 public class TreeNode {
     int val;
