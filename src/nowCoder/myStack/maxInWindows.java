@@ -27,8 +27,17 @@ public class maxInWindows {
             dq.offerLast(i);
 
             // 4) 形成完整窗口后，队头就是最大值
-            if (i >= size - 1) ans.add(num[dq.peekFirst()]);
+            if (i >= size - 1)
+                ans.add(num[dq.peekFirst()]);
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        maxInWindows solution = new maxInWindows();
+        int[] nums = {3, 1, 1, 3};
+        int size = 3;
+        ArrayList<Integer> result = solution.maxInWindows(nums, size);
+        System.out.println(result); // Expected output: [4, 4, 6, 6, 5]
     }
 }

@@ -33,6 +33,6 @@ public class InversePairs {
         }
         while (i <= m) temp[k++] = a[i++];
         while (j <= r) temp[k++] = a[j++];
-        
+        return cnt;
     }
 }
