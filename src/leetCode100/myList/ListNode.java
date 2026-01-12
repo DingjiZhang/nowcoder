@@ -1,15 +1,15 @@
 package leetCode100.myList;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
         next = null;
     }
 
-    ListNode(int x, ListNode node) {
+    public ListNode(int x, ListNode node) {
         val = x;
         next = node;
     }

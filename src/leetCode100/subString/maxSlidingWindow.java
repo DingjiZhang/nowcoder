@@ -5,10 +5,10 @@ import java.util.*;
 public class maxSlidingWindow {
     /*
      * 维护一个队列，存数组下标，值递减，对头就是最大值
-     * 1. 队头出了范围弹掉
-     * 2. 队尾的值<= 当前值，弹掉
+     * 1. 队头出了范围弹掉队头
+     * 2. 队尾的值<= 当前值，弹掉队尾
      * 3. 压入当前下标
-     * 4. 满足了当前窗口大小，记录队头
+     * 4. 满足了当前窗口大小，记录队头（每次都记录，直到遍历结束）
      * */
 
     public int[] maxSlidingWindow(int[] nums, int k) {
@@ -23,7 +23,7 @@ public class maxSlidingWindow {
             while (!q.isEmpty() && nums[q.peekLast()] <= nums[i]) q.pollLast();
             // 3.
             q.offerLast(i);
-            // 4.
+            // 4. 这里会取到大于吗？
             if (i >= k - 1) {
                 ans.add(nums[q.peekFirst()]);
             }

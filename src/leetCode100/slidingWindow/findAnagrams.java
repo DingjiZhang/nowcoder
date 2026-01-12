@@ -10,7 +10,7 @@ public class findAnagrams {
     // 找到s中所有p的排列，返回所有起始索引
     public List<Integer> findAnagrams(String s, String p) {
         if (s == null || s.isEmpty() || p == null || p.isEmpty()) return new ArrayList<>();
-
+        // need 表示p中每个字符需要出现的次数
         Map<Character, Integer> need = new HashMap<>(), window = new HashMap<>();
         for (Character c : p.toCharArray()) {
             need.put(c, need.getOrDefault(c, 0) + 1);
@@ -23,7 +23,7 @@ public class findAnagrams {
         while (r < s.length()) {
             char c = s.charAt(r);
             r++;
-            // 窗口内数据更新
+            // 窗口内数据更新 - 更新valid
             if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
                 if (window.get(c).equals(need.get(c))) {
@@ -32,6 +32,7 @@ public class findAnagrams {
             }
 
             // 判断左侧窗口是否要收缩
+            // 每次都判断窗口长度是否大于等于p的长度，使窗口长度等于p的长度，移出l元素
             while (r - l >= p.length()) {
                 // 这里做答案操作
                 // 当窗口符合条件时，起始索引加入
@@ -39,7 +40,7 @@ public class findAnagrams {
                 // 缩左侧
                 char d = s.charAt(l);
                 l++;
-                // 窗口内数据更新
+                // 窗口内数据更新 - 更新valid
                 if (need.containsKey(d)) {
                     if (window.get(d).equals(need.get(d))) {
                         valid--;

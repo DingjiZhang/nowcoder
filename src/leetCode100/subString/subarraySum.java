@@ -16,10 +16,11 @@ public class subarraySum {
 
         for (int x : nums) {
             preSum += x;
+            // 搜索map中目标所要前缀和个数
             if (map.containsKey(preSum - k)) {
                 ans += map.get(preSum - k); // 获取次数
             }
-            // 更新
+            // 更新 放入当前的前缀和
             map.put(preSum, map.getOrDefault(preSum, 0) + 1);
         }
         return ans;

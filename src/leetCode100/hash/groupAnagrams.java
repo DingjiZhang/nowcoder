@@ -8,7 +8,7 @@ public class groupAnagrams {
         Map<String, List<String>> map = new HashMap<>();
         for (String s : strs) {
             char[] arr = s.toCharArray();
-            Arrays.sort(arr); // O nlogn
+            Arrays.sort(arr); // O(nlogn)
             String key = new String(arr);
             map.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
         }
