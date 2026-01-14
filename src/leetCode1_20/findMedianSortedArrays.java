@@ -1,4 +1,4 @@
-package leetCode200;
+package leetCode1_20;
 
 public class findMedianSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {

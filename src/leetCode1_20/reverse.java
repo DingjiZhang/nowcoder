@@ -1,4 +1,4 @@
-package leetCode200;
+package leetCode1_20;
 
 public class reverse {
     public int reverse(int x) {
