@@ -17,8 +17,8 @@ public class trap {
             leftMax = Math.max(leftMax, height[left]);
             rightMax = Math.max(rightMax, height[right]);
             if (leftMax < rightMax) {
-                // 左边最大小于右边最大
-                // 当前列靠左边的最大高度决定能储多少水
+                // 左边最大 < 右边最大
+                // 当前列靠左边的最大高度决定能储多少水 即水的高度由较矮的墙决定
                 // 当前要考虑的列是left位置
                 // 当前列的储水量=leftMax - 当前列高度
                 res += leftMax - height[left];
